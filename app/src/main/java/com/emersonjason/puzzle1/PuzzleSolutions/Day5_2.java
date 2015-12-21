@@ -1,12 +1,12 @@
 package com.emersonjason.puzzle1.PuzzleSolutions;
 
 import android.support.v4.util.ArrayMap;
-import android.util.Log;
+
 import com.emersonjason.puzzle1.PuzzleAlgorithm;
 import java.util.Map;
 
-public class Day5StringsPart2 implements PuzzleAlgorithm {
-    private final static String TAG = Day5StringsPart2.class.getSimpleName();
+public class Day5_2 implements PuzzleAlgorithm {
+    private final static String TAG = Day5_2.class.getSimpleName();
     private String[] words;
 
     public double getResult(String fileData) {

@@ -6,22 +6,22 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Day2Ribbon implements PuzzleAlgorithm {
-    private final static String TAG = Day2Ribbon.class.getSimpleName();
+public class Day2_1 implements PuzzleAlgorithm {
+    private final static String TAG = Day2_1.class.getSimpleName();
     private final static int LENGTH = 0;
     private final static int WIDTH = 1;
     private final static int HEIGHT = 2;
     public List<int[]> intArrays;
     private String[] tokens;
 
-    public Day2Ribbon() {
+    public Day2_1() {
         this.intArrays = new ArrayList<>();
     }
 
     public double getResult(String fileData) {
         tokenizeFileData(fileData);
         convertTokensToIntArrays();
-        return findRibbonAndBowLength();
+        return findAreaPlusSmallDimension();
     }
 
     public void tokenizeFileData(String fileData) {
@@ -37,22 +37,24 @@ public class Day2Ribbon implements PuzzleAlgorithm {
         intArrays = builder.getIntArrays();
     }
 
-    public double findRibbonAndBowLength() {
-        double totalRibbonLength = 0;
+    public double findAreaPlusSmallDimension() {
+        double totalSurfaceArea = 0;
         for (int[] intArr : intArrays) {
+            double LxW = (2 * intArr[LENGTH] * intArr[WIDTH]);
+            double WxH = (2 * intArr[WIDTH] * intArr[HEIGHT]);
+            double HxL = (2 * intArr[HEIGHT] * intArr[LENGTH]);
+
             List<Integer> dimensions = new ArrayList<>();
-            dimensions.add(intArr[LENGTH]);
-            dimensions.add(intArr[WIDTH]);
-            dimensions.add(intArr[HEIGHT]);
+            dimensions.add(intArr[LENGTH] * intArr[WIDTH]);
+            dimensions.add(intArr[WIDTH] * intArr[HEIGHT]);
+            dimensions.add(intArr[HEIGHT] * intArr[LENGTH]);
             Collections.sort(dimensions);
 
-            double ribbon = (2 * dimensions.get(0)) +
-                    (2 * dimensions.get(1));
-            double ribbonBow = intArr[LENGTH] * intArr[WIDTH] *
-                    intArr[HEIGHT];
-            totalRibbonLength += ribbon + ribbonBow;
+            double surfaceArea = LxW + WxH + HxL;
+            double smallestDimension = dimensions.get(0);
+            totalSurfaceArea += surfaceArea + smallestDimension;
         }
-        return totalRibbonLength;
+        return totalSurfaceArea;
     }
 
     public void extraAppend(StringBuilder txt) {

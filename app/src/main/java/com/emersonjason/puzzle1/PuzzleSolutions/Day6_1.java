@@ -1,7 +1,8 @@
-package com.emersonjason.puzzle1;
+package com.emersonjason.puzzle1.PuzzleSolutions;
 
 
-import com.emersonjason.puzzle1.PuzzleSolutions.LightBulb;
+import com.emersonjason.puzzle1.PuzzleAlgorithm;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;

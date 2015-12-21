@@ -1,19 +1,17 @@
 package com.emersonjason.puzzle1.PuzzleSolutions;
 
-import android.util.Log;
-
 import com.emersonjason.puzzle1.PuzzleAlgorithm;
-
 import java.text.StringCharacterIterator;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Day5Strings implements PuzzleAlgorithm {
-    private final static String TAG = Day5Strings.class.getSimpleName();
+public class Day5_1 implements PuzzleAlgorithm {
+    private final static String TAG = Day5_1.class.getSimpleName();
+    private final static int MAX_VOWELS = 2;
     List<String> disqualifiers;
     private String[] words;
 
-    public Day5Strings() {
+    public Day5_1() {
         this.disqualifiers = new ArrayList<>();
         disqualifiers.add("ab");
         disqualifiers.add("cd");
@@ -73,7 +71,7 @@ public class Day5Strings implements PuzzleAlgorithm {
                     break;
             }
         }
-        return (vowelCount > 2);
+        return (vowelCount > MAX_VOWELS);
     }
 
     public boolean checkForTwoInRow(String word) {

@@ -1,6 +1,5 @@
 package com.emersonjason.puzzle1.PuzzleSolutions;
 
-import android.util.Log;
 import com.emersonjason.puzzle1.PuzzleAlgorithm;
 
 import java.util.ArrayList;
@@ -8,8 +7,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class Day3Grid implements PuzzleAlgorithm {
-    private final static String TAG = Day3Grid.class.getSimpleName();
+public class Day3_1 implements PuzzleAlgorithm {
+    private final static String TAG = Day3_1.class.getSimpleName();
     private char[] tokens;
 
     public double getResult(String fileData) {
