@@ -13,9 +13,11 @@ public class LightBulb {
                 }
                 break;
             }
-            case "on": isOn = true;
+            case "on":
+                isOn = true;
                 break;
-            case "off": isOn = false;
+            case "off":
+                isOn = false;
                 break;
         }
     }

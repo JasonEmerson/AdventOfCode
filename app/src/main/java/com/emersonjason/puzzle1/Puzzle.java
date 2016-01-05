@@ -16,17 +16,17 @@ public class Puzzle {
 
     public Puzzle(Context context) {
         this.context = context;
-        this.puzzle = new Day5_1();
+        this.puzzle = new Day6_1();
     }
 
     public void solve() {
         loadRawStringFile();
         double result = puzzle.getResult(fileData);
-        Log.v(TAG, "Result ------------------> " + result);
+        Log.v(TAG, "Result: " + result);
     }
 
     public void loadRawStringFile() {
-        InputStream is = context.getResources().openRawResource(R.raw.day5input);
+        InputStream is = context.getResources().openRawResource(R.raw.day6input);
         InputStreamReader isr = new InputStreamReader(is);
         BufferedReader br = new BufferedReader(isr);
         String line;

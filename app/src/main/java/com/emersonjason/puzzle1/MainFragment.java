@@ -9,12 +9,12 @@ import android.widget.TextView;
 
 public class MainFragment extends android.support.v4.app.Fragment {
 
-    private Puzzle puzzle;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        puzzle = new Puzzle(getActivity().getApplicationContext());
+        Puzzle puzzle = new Puzzle(getActivity().getApplicationContext());
         puzzle.solve();
     }
 

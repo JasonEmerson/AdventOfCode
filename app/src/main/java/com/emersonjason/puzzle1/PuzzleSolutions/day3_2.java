@@ -7,14 +7,14 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class day3_2 implements PuzzleAlgorithm {
+public class Day3_2 implements PuzzleAlgorithm {
     private final static String TAG = Day3_1.class.getSimpleName();
     private char[] tokens;
     private List<Character> santa;
     private List<Character> santaRobot;
     private List<Point> totalHouses;
 
-    public day3_2() {
+    public Day3_2() {
         santa = new ArrayList<>();
         santaRobot = new ArrayList<>();
         totalHouses = new ArrayList<>();

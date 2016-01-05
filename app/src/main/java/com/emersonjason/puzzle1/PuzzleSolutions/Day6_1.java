@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
 
 public class Day6_1 implements PuzzleAlgorithm {
     private static final String TAG = Day6_1.class.getSimpleName();
-    List<List<LightBulb>> bulbGrid;
+    private List<List<LightBulb>> bulbGrid;
     private String[] words;
 
     public Day6_1() {
